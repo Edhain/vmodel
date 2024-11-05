@@ -390,7 +390,7 @@ def voronoi_plot_2d(vor, ax=None, **kw):
     line_style = kw.get('line_style', 'solid')
 
     center = vor.points.mean(axis=0)
-    ptp_bound = vor.points.ptp(axis=0)
+    ptp_bound = np.ptp(vor.points, axis=0))
 
     finite_segments = []
     infinite_segments = []
