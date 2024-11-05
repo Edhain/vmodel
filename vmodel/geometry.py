@@ -33,7 +33,7 @@ def voronoi_neighbors(positions: np.ndarray) -> list:
     """
     tri = Delaunay(positions)
     neighbors = defaultdict(set)
-    for p in tri.vertices:
+    for p in tri.simplices:
         for i, j in combinations(p, 2):
             neighbors[i].add(j)
             neighbors[j].add(i)
